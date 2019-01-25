@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="140dp"
+    android:background="#388E3C">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Navigation Menu"
+        android:textSize="20dp"
+        android:textColor="#605958"
+        android:layout_marginTop="100dp"/>
+
+</RelativeLayout>

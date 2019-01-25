@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:shrinkColumns="2"
+    android:collapseColumns="1"
+    tools:context="com.example.habibcse25.tablelayout.MainActivity">
+    <TableRow>
+        <TextView android:text="column 0" />
+        <TextView android:text="column 1" />
+        <TextView android:text="column 2" />
+        <EditText android:ems="10" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="column 0" android:layout_column="1"/>
+        <EditText android:ems="10" />
+    </TableRow>
+    <TableRow
+         android:id="@+id/rwone">
+        <TextView
+            android:text="this is big"
+            android:background="#c24949"
+            android:layout_span="3"/>
+     </TableRow>
+
+     <TableRow
+         android:id="@+id/rowone">
+         <TextView android:text="col 0"
+             android:background="#deb140"/>
+         <Button android:text="col1"/>
+         <Button android:text="col2"/>
+         <Button android:text="col3" />
+     </TableRow>
+
+
+
+</TableLayout>

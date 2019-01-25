@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/otherbackk">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="08dp">
+        <ImageView
+            android:id="@+id/imgViewColor"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/color2"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="50dp"/>
+        <TextView
+            android:id="@+id/textview_colors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Colors"
+            android:textColor="#c6082a"
+            android:layout_alignBaseline="@+id/textview_fruits"
+            android:textSize="15dp"
+            android:layout_alignLeft="@+id/imgViewColor"
+            />
+        <ImageView
+            android:id="@+id/imgViewMonths"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/months2"
+            android:layout_marginTop="250dp"
+            android:layout_alignLeft="@+id/imgViewFruits"
+            />
+        <TextView
+            android:id="@+id/textview_Months"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Months"
+            android:textColor="#c6082a"
+            android:textSize="15dp"
+            android:layout_alignLeft="@+id/textview_fruits"
+            android:layout_alignBaseline="@+id/textview_days"/>
+        <ImageView
+            android:id="@+id/imgViewFruits"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/fruit"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="170dp"
+            />
+        <TextView
+            android:id="@+id/textview_fruits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fruits"
+            android:textSize="15dp"
+            android:textColor="#c6082a"
+            android:layout_alignLeft="@+id/imgViewFruits"
+            android:layout_marginTop="180dp"/>
+        <ImageView
+            android:id="@+id/imgViewDays"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:src="@drawable/days"
+            android:layout_marginTop="250dp"
+            android:layout_alignLeft="@+id/imgViewColor"/>
+        <TextView
+            android:id="@+id/textview_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Days"
+            android:textSize="15dp"
+            android:textColor="#c6082a"
+            android:layout_marginTop="345dp"
+            android:layout_alignLeft="@+id/imgViewColor"/>
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

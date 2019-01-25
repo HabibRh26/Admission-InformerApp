@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/ListImgViewUser"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/user"
+
+        />
+
+    <TextView
+        android:id="@+id/ListTextViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/ListImgViewUser"
+        android:text="Md Habibur Rahman"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+
+        />
+
+    <TextView
+        android:id="@+id/ListTextViewCGPA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ListImgViewUser"
+        android:layout_below="@+id/ListTextViewName"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/ListImgViewUser"
+        android:text="3.46"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+
+        />
+
+    <ImageView
+        android:id="@+id/ListViewCall_Icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/phonecall"
+
+        />
+</RelativeLayout>

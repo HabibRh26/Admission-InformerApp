@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/imageViewUser"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/user"/>
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Miral Sarwar"
+        android:layout_toRightOf="@id/imageViewUser"
+        android:layout_marginLeft="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+    <TextView
+        android:id="@+id/textViewCGPA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3.33"
+        android:layout_below="@id/textViewName"
+        android:layout_alignLeft="@id/textViewName"/>
+
+    <ImageView
+        android:id="@+id/imageViewCall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ultaphone"/>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">QAAi</string>
+    <string-array name="public_univ_list">
+        <item>Jagannath Univ</item>
+        <item>Dhaka Univ</item>
+        <item>Jahangirnagar Univ</item>
+    </string-array>
+    <string-array name="private_list">
+        <item>NSU</item>
+        <item>Aust</item>
+        <item>Brac</item>
+        <item>EWU</item>
+        <item>AIUB</item>
+    </string-array>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+</resources>

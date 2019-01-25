@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context="com.example.user.relativelay.MainActivity">
+
+    <EditText
+        android:id="@+id/editUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_toRightOf="@+id/imgViewUsername"
+        android:hint="UserName"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editUsername"
+        android:layout_toRightOf="@+id/imgViewPass"
+        android:hint="Password"
+        android:inputType="textPassword"
+
+
+        />
+
+    <EditText
+        android:id="@+id/editcgpa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editPassword"
+        android:layout_toRightOf="@+id/imgViewcgpa"
+        android:hint="CGPA"
+        android:inputType="numberDecimal"
+        android:maxLength="4" />
+
+    <EditText
+        android:id="@+id/editphoneNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editcgpa"
+        android:layout_toRightOf="@+id/imgViewPhone"
+        android:hint="phone NO"
+        android:inputType="phone"
+        android:maxLength="11" />
+
+    <Button
+        android:id="@+id/buttonsave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editphoneNo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:onClick="saveData"
+        android:text="SAVE"
+
+        />
+
+    <ImageView
+        android:id="@+id/imgViewUsername"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:src="@drawable/user"
+
+
+        />
+
+    <ImageView
+        android:id="@+id/imgViewPass"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@id/editPassword"
+        android:layout_below="@+id/imgViewUsername"
+        android:src="@drawable/pass"
+
+
+        />
+
+    <ImageView
+        android:id="@+id/imgViewcgpa"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/editcgpa"
+        android:layout_below="@+id/imgViewPass"
+
+
+        />
+
+    <ImageView
+        android:id="@+id/imgViewPhone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/editphoneNo"
+        android:layout_below="@+id/imgViewcgpa"
+        android:src="@drawable/phonepic"
+        />
+
+    <ListView
+        android:id="@+id/listViewStduents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/buttonsave"
+        >
+
+    </ListView>
+
+
+</RelativeLayout>

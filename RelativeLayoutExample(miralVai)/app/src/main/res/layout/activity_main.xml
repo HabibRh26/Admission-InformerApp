@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imageViewUsername"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/user" />
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/imageViewUsername"
+        android:hint="Username"
+        android:inputType="text"
+        android:maxLength="30" />
+
+    <ImageView
+        android:id="@+id/imageViewPhone"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/imageViewUsername"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/phone" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/imageViewPhone"
+        android:layout_alignLeft="@id/editTextUsername"
+        android:hint="Phone No"
+        android:inputType="phone"
+        android:maxLength="11" />
+
+    <ImageView
+        android:id="@+id/imageViewEmail"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/imageViewPhone"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/email" />
+
+    <ImageView
+        android:id="@+id/imageViewCGPA"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/imageViewEmail"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/editTextCgpa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/imageViewCGPA"
+        android:hint="CGPA"
+        android:inputType="numberDecimal"
+        android:maxLength="4"
+        android:layout_alignLeft="@id/editTextUsername"/>
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/imageViewEmail"
+        android:layout_alignLeft="@id/editTextUsername"
+        android:hint="Email"
+        android:maxLength="30"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewCGPA"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Save"
+        android:onClick="saveData"/>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSave"
+        android:layout_marginTop="10dp"></ListView>
+</RelativeLayout>

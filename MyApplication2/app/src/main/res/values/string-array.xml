@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="myarray">
+        <item>sat</item>
+        <item>mon</item>
+        <item>sun</item>
+        <item>tues</item>
+        <item>wed</item>
+        <item>thrus</item>
+        <item>fri</item>
+    </string-array>
+</resources>
