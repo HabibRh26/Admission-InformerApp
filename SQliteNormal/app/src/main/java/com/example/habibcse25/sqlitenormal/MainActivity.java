@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.facebook.stetho.Stetho;
+
 public class MainActivity extends AppCompatActivity {
     DB_helperCls helperCls;
     EditText name,surname,marks,updateID;
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         helperCls = new DB_helperCls(this);
+
+        Stetho.initializeWithDefaults(this);
 
         name = findViewById(R.id.editTxtName);
         surname = findViewById(R.id.editTxtSurName);
@@ -79,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
     public void getData(View view) {
         SQLiteDatabase db = helperCls.getWritableDatabase();
 
-        Cursor cursor = db.rawQuery("select * from Mystudnt",null);
+        Cursor cursor = db.rawQuery("select * from Mystudntupdate",null);
         int nameCol = cursor.getColumnIndex("NAME");
         int surnameCol  = cursor.getColumnIndex("SURNAME");
         int marksCol = cursor.getColumnIndex("MARKS");

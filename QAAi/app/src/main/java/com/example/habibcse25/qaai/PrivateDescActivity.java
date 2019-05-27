@@ -1,6 +1,6 @@
 package com.example.habibcse25.qaai;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class PrivateDescActivity extends AppCompatActivity {

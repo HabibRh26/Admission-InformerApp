@@ -1,28 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.habibcse25.qaai.UniversityActivity">
-    <include layout="@layout/toolbar"
-        android:id="@+id/univ_toolbar"></include>
+    tools:context="com.example.habibcse25.qaai.UniversityActivity"
+    android:background="#97E499">
 
-    <Button
-        android:id="@+id/btnPublic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Public University" />
+    <include
+        android:id="@+id/univ_toolbar"
+        layout="@layout/toolbar"></include>
+
+    <ImageView
+
+        android:id="@+id/ImgVwPrivate"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/private_black" />
     <Button
         android:id="@+id/btnPrivate"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="Engr University" />
-    <Button
-        android:id="@+id/btnNational"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Private University" />
+        android:text="Private University Admission"
+        android:background="@drawable/rounded_btn_univ_admission"
+        android:layout_below="@+id/ImgVwPrivate"
+        android:layout_alignLeft="@+id/ImgVwPrivate"
+        android:layout_marginTop="7dp"/>
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/ImgVwPublic"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/public_icon"
+        android:text="Public University" />
+    <Button
+        android:id="@+id/btnPublic"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_btn_univ_admission"
+        android:text="Public University Admission"
+        android:layout_alignLeft="@+id/ImgVwPublic"
+        android:layout_below="@+id/ImgVwPublic"
+        android:layout_marginTop="7dp"/>
+
+    <ImageView
+
+        android:id="@+id/ImgVwEngr"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/ImgVwPublic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/cogwheel"/>
+    <Button
+        android:id="@+id/btnEngr"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Engineering Admission"
+        android:layout_alignLeft="@+id/ImgVwEngr"
+        android:layout_below="@+id/ImgVwEngr"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/rounded_btn_univ_admission"/>
+
+</RelativeLayout>

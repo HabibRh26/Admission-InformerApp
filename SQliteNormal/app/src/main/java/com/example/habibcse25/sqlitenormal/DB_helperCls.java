@@ -11,9 +11,9 @@ import android.widget.Toast;
  */
 
 public class DB_helperCls extends SQLiteOpenHelper {
-    public static final String DB_Name = "Mydb.db";
+    public static final String DB_Name = "SMqMdb.db";
     public static final int DB_Version =1;
-    public static final String TABLE_NAME = "Mystudnt";
+    public static final String TABLE_NAME = "Mystudntupdate";
     public static final String col_1 = "ID";
     public static final String col_2 = "NAME";
     public static final String col_3 = "SURNAME";
@@ -26,8 +26,9 @@ public class DB_helperCls extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-       // db.execSQL("create table " + TABLE_NAME +"("+col_1 +" INTEGER PRIMARY KEY AUTOINCREMENT,"+col_2+" TEXT,"+col_3+" TEXT,"+col_4+" INTEGER);");
-        db.execSQL("create table " + TABLE_NAME +" (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,SURNAME TEXT,MARKS INTEGER)");
+        db.execSQL("create table " + TABLE_NAME +"("+col_1 +" INTEGER PRIMARY KEY AUTOINCREMENT,"+col_2+" TEXT,"+col_3+" TEXT,"+col_4+" INTEGER);");
+        //db.execSQL("create table " + TABLE_NAME +" (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,SURNAME TEXT,MARKS INTEGER)");
+      //  SQLiteDatabase sqdb = this.getWritableDatabase();
 
     }
 

@@ -1,6 +1,6 @@
 package com.example.habibcse25.qaai;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,12 +8,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.habibcse25.qaai.Model_clss.DataToFirebase;
+import com.example.habibcse25.qaai.Model_clss.NoticeData_to_firebase;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class DataSendActivity extends AppCompatActivity implements View.OnClickListener {
-    EditText univ_Name,univ_details;
-    Button sendDataFirebase;
+public class DataSendActivity extends AppCompatActivity {
+    EditText univ_Name, univ_details, NoticeUniName, NoticeDetails;
+    Button sendDataFirebase, sendNoticeFirebase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,25 +23,31 @@ public class DataSendActivity extends AppCompatActivity implements View.OnClickL
         univ_Name = findViewById(R.id.editTxtVarsityName);
         univ_details = findViewById(R.id.edittxtDetails);
         sendDataFirebase = findViewById(R.id.sendDataFirebase);
-        sendDataFirebase.setOnClickListener(DataSendActivity.this);
-       /* String var_name = univ_Name.getText().toString();
-        String var_details = univ_details.getText().toString();*/
 
+        NoticeUniName = findViewById(R.id.Notice_univName);
+        NoticeDetails = findViewById(R.id.Notice_univData);
+        sendNoticeFirebase = findViewById(R.id.btnNoticeSend);
     }
 
-    private void saveToFirebaseDB() {
+
+    public void saveToFirebaseDB(View view) {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference dbRef = database.getReference("Univ_Circulars");
         String Univ_ID = dbRef.push().child(univ_Name.getText().toString()).getKey();
 
-        DataToFirebase dataToFirebase = new DataToFirebase(univ_Name.getText().toString(),univ_details.getText().toString());
+        DataToFirebase dataToFirebase = new DataToFirebase(univ_Name.getText().toString(), univ_details.getText().toString());
         dbRef.child(Univ_ID).setValue(dataToFirebase);
+        Toast.makeText(this,"Circular sent successfully",Toast.LENGTH_LONG).show();
+
     }
 
-    @Override
-    public void onClick(View view) {
-        saveToFirebaseDB();
-        Toast.makeText(getApplicationContext(),"Data Sent to Firebase",Toast.LENGTH_SHORT).show();
+    public void saveNoticeFirebase(View view) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference dbRef = database.getReference("Univ_Notice");
+        String Univ_ID = dbRef.push().child(NoticeUniName.getText().toString()).getKey();
 
+        NoticeData_to_firebase noticedataToFirebase = new NoticeData_to_firebase(NoticeUniName.getText().toString(), NoticeDetails.getText().toString());
+        dbRef.child(Univ_ID).setValue(noticedataToFirebase);
+        Toast.makeText(this,"Notice sent successfully",Toast.LENGTH_LONG).show();
     }
 }

@@ -1,10 +1,10 @@
 package com.example.habibcse25.qaai;
 
 import android.content.Intent;
-import android.content.res.Resources;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -46,6 +46,10 @@ public class PrivateActivity extends AppCompatActivity implements AdapterView.On
         PunivCls aust = new PunivCls(R.drawable.aust,"AUST");
         PunivCls ewu = new PunivCls(R.drawable.ewu,"East West University");
         PunivCls nsu = new PunivCls(R.drawable.nsu,"North South University");
+        PunivCls aiub = new PunivCls(R.drawable.aiub,"AIUB University");
+        PunivCls daffodil = new PunivCls(R.drawable.daffodil,"Daffodil University");
+        PunivCls uiu = new PunivCls(R.drawable.uiu,"UIU University");
+        PunivCls iubat = new PunivCls(R.drawable.iubat,"IUBAT University");
 
 
 
@@ -53,12 +57,17 @@ public class PrivateActivity extends AppCompatActivity implements AdapterView.On
         arrayListPunivCls.add(aust);
         arrayListPunivCls.add(ewu);
         arrayListPunivCls.add(nsu);
+        arrayListPunivCls.add(aiub);
+        arrayListPunivCls.add(daffodil);
+        arrayListPunivCls.add(uiu);
+        arrayListPunivCls.add(iubat);
 
     }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
         Intent intent = new Intent(PrivateActivity.this,PrivateDescActivity.class);
+        startActivity(intent);
 
     }
 }

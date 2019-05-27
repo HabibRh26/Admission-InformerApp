@@ -10,7 +10,8 @@
         android:id="@+id/adminPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="admin password goes here...."/>
+        android:hint="admin password goes here...."
+        android:inputType="textPassword" />
     <Button
         android:id="@+id/passSubmit"
         android:text="submit"

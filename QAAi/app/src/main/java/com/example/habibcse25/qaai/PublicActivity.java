@@ -2,41 +2,58 @@ package com.example.habibcse25.qaai;
 
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.widget.Toast;
 
-import com.example.habibcse25.qaai.fragments.FragmentA;
-import com.example.habibcse25.qaai.fragments.FragmentB;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.habibcse25.qaai.Model_clss.PublicUnivCls;
+import com.example.habibcse25.qaai.adapter.PublicAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
-public class PublicActivity extends AppCompatActivity implements FragmentA.Communicator {
-    FragmentA fA;
-    FragmentB fB;
-    FragmentManager manager;
+public class PublicActivity extends AppCompatActivity implements PublicAdapter.ItemListener {
+
     Toolbar Public_uni_toolbar;
+    PublicAdapter recycleAdapter;
+    List<PublicUnivCls> publicUnivList;
+    RecyclerView recyclerViewUniv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_public);
-        manager = getSupportFragmentManager();
-        fA= (FragmentA) manager.findFragmentById(R.id.fragment1);
-        fA.setCommunicator(this);
 
         Public_uni_toolbar = findViewById(R.id.Public_uni_toolbar);
         setSupportActionBar(Public_uni_toolbar);
         getSupportActionBar().setTitle("Public Universities");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        publicUnivList = new ArrayList<>();
 
+        recyclerViewUniv = findViewById(R.id.recyclerView);
+        recyclerViewUniv.setHasFixedSize(true);
+        recyclerViewUniv.setLayoutManager(new LinearLayoutManager(this));
+
+        PublicUnivCls publicUnivObj1 = new PublicUnivCls("daffodil","dhanmondi",R.drawable.daffodil);
+        PublicUnivCls publicUnivObj2 = new PublicUnivCls("UIU","dhanmondi",R.drawable.uiu);
+
+        publicUnivList.add(publicUnivObj1);
+        publicUnivList.add(publicUnivObj2);
+
+        recycleAdapter = new PublicAdapter(this,publicUnivList,this);
+        recyclerViewUniv.setAdapter(recycleAdapter);
 
     }
+
     @Override
-    public void respond(int position) {
-        fB= (FragmentB) manager.findFragmentById(R.id.fragment2);
-        fB.changeData(position);
-
-
+    public void onClickITem(int position) {
+        Toast.makeText(this,"new way clicked",Toast.LENGTH_LONG).show();
+        Log.d("clicked","clicked");
     }
 }

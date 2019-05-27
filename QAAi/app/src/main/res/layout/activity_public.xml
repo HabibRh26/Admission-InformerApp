@@ -1,37 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.habibcse25.qaai.PublicActivity"
-    android:orientation="vertical">
-    <include layout="@layout/toolbar"
-        android:id="@+id/Public_uni_toolbar"></include>
+    tools:context="com.example.habibcse25.qaai.PublicActivity">
+
+    <include
+        android:id="@+id/Public_uni_toolbar"
+        layout="@layout/toolbar"></include>
 
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="3">
+        android:layout_below="@+id/Public_uni_toolbar"
+        android:background="#F2F7F2"
+        android:padding="2dp"
+        tools:listitem="@layout/recycler_vw_public_list">
 
-        <fragment
-            android:id="@+id/fragment1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:name="com.example.habibcse25.qaai.fragments.FragmentA">
-        </fragment>
-        <fragment
-            android:id="@+id/fragment2"
-            android:name="com.example.habibcse25.qaai.fragments.FragmentB"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2">
-        </fragment>
-
-    </LinearLayout>
+    </androidx.recyclerview.widget.RecyclerView>
 
 
-</LinearLayout>
+</RelativeLayout>
+

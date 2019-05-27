@@ -23,7 +23,24 @@
             android:text="send to Firebase"
             android:id="@+id/sendDataFirebase"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:onClick="saveToFirebaseDB"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="University Name"
+            android:id="@+id/Notice_univName"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="University Notice goes here"
+            android:id="@+id/Notice_univData"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Notice To Firebase"
+            android:id="@+id/btnNoticeSend"
+            android:onClick="saveNoticeFirebase"/>
 
 
     </LinearLayout>

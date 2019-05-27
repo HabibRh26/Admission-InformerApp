@@ -1,9 +1,19 @@
 <resources>
-    <string name="app_name">QAAi</string>
+    <string name="app_name">Admission Aid</string>
+    <string name="net_connection_dialog_text">try again</string>
     <string-array name="public_univ_list">
         <item>Jagannath Univ</item>
         <item>Dhaka Univ</item>
         <item>Jahangirnagar Univ</item>
+        <item>Rajshahi Univ</item>
+        <item>Khulna Univ</item>
+        <item>Chittagong Univ</item>
+        <item>Barisal Univ</item>
+        <item>Mymensingh Agri Univ</item>
+        <item>Comilla Univ</item>
+        <item>Begum Rokeya Univ</item>
+
+
     </string-array>
     <string-array name="private_list">
         <item>NSU</item>
@@ -11,6 +21,10 @@
         <item>Brac</item>
         <item>EWU</item>
         <item>AIUB</item>
+        <item>DIU</item>
+        <item>UIU</item>
+        <item>IUBAT</item>
+
     </string-array>
     <string name="open">Open</string>
     <string name="close">Close</string>

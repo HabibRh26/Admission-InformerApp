@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/rate_app"
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item android:id="@+id/nav_rate_app"
         android:title="Rate App"
         android:icon="@mipmap/sharp_star_rate_black_18dp"></item>
-    <item android:id="@+id/settings"
-        android:title="Settings"
-        android:icon="@mipmap/sharp_settings_black_18dp"></item>
-    <item android:id="@+id/FeedBack"
+    <item android:id="@+id/nav_settings"
+    android:title="Settings"
+    android:icon="@mipmap/sharp_settings_black_18dp"></item>
+    <item android:id="@+id/nav_admin"
+        android:title="admin"
+        android:icon="@drawable/ic_admin_black_24dp"></item>
+
+    <item android:id="@+id/nav_FeedBack"
         android:title="FeedBack"
         android:icon="@mipmap/sharp_feedback_black_18dp"></item>
-    <item android:id="@+id/help" android:title="help?"
+    <item android:id="@+id/nav_help" android:title="help"
         android:icon="@mipmap/sharp_help_black_18dp"></item>
 
 </menu>

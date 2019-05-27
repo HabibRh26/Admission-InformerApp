@@ -1,55 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout android:layout_width="match_parent"
+<androidx.drawerlayout.widget.DrawerLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_drawerLay">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.example.habibcse25.qaai.MainActivity">
+        tools:context="com.example.habibcse25.qaai.MainActivity"
+        android:background="#97E499">
 
         <include layout="@layout/toolbar"
             android:id="@+id/toolbar"/>
 
-
-
-        <Button
-            android:id="@+id/btnVarsity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="University Admission" />
-
-        <Button
+        <!--<Button
             android:id="@+id/btnCollege"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="College Admission" />
+            android:text="College Admission" />-->
 
-        <Button
+
+        <!--<Button
             android:id="@+id/btnAdmin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Register" />
-        <Button
+            android:text="Register" />-->
+
+       <!-- <Button
+            android:layout_below="@+id/btnVarsity"
             android:id="@+id/admin_section_btn"
             android:text="admin section"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />-->
+        <ImageView
+            android:id="@+id/univIconImgVw"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="240dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/university"/>
+        <Button
+
+            android:id="@+id/btnVarsity"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="university admission"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="450dp"
+            android:layout_alignLeft="@+id/univIconImgVw"
+            android:background="@drawable/rounded_btn_univ_admission"
+
+            />
 
 
-    </LinearLayout>
-    <android.support.design.widget.NavigationView
+
+
+
+    </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/NavView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         app:menu="@menu/navigation_menu"
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header">
-    </android.support.design.widget.NavigationView>
+    </com.google.android.material.navigation.NavigationView>
 
 
-</android.support.v4.widget.DrawerLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -23,8 +23,12 @@
           }
         },
         {
-          "client_id": "787869729874-i8phbk6p5frtfpktfoijis9rtqjlt96r.apps.googleusercontent.com",
-          "client_type": 3
+          "client_id": "787869729874-4sme04kr54ditmmodir2jk0k5m4vnco5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.habibcse25.qaai",
+            "certificate_hash": "dd7a6b87b75d541430b113c8ed7d6a1e743e0284"
+          }
         }
       ],
       "api_key": [
@@ -33,20 +37,37 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
               "client_id": "787869729874-i8phbk6p5frtfpktfoijis9rtqjlt96r.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787869729874:android:14a1f23b54360d60",
+        "android_client_info": {
+          "package_name": "com.example.habibcse25.qaai_admin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW885bBTMN1_H7PJkjgzKGihVHedKRluI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787869729874-i8phbk6p5frtfpktfoijis9rtqjlt96r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
