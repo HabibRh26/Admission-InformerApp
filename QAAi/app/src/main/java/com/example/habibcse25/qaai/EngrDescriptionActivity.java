@@ -35,7 +35,7 @@ public class EngrDescriptionActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Admission Circular");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-            dbRef = FirebaseDatabase.getInstance().getReference("Univ_Circulars");
+            dbRef = FirebaseDatabase.getInstance().getReference("Univ_Engineering");
             if(index ==0){
                 dbRef.child("BUET").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
@@ -78,6 +78,26 @@ public class EngrDescriptionActivity extends AppCompatActivity {
 
         }
             else if(index ==2){
+                dbRef.child("BUET").addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        DataToFirebase univ_Name = dataSnapshot.getValue(DataToFirebase.class);
+                        DataToFirebase univ_details  = dataSnapshot.getValue(DataToFirebase.class);
+
+
+                        textengr1.setText(univ_Name.getuniv_Name()+": ");
+                        textengr2.setText(univ_details.getuniv_details());
+
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+
+            }
+            else if(index ==3){
                 dbRef.child("BUET").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {

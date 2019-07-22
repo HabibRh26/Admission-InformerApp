@@ -11,40 +11,32 @@
         android:elevation="8dp"
         app:cardCornerRadius="6dp"
         android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground">
+        android:foreground="?android:attr/selectableItemBackground"
+       >
 
         <RelativeLayout
             android:id="@+id/layoutRelative"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:background="@color/colorPrimaryDark">
+            android:background="#43a047">
 
             <ImageView
                 android:id="@+id/imgVwUniv"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/aiub" />
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/dutrans" />
 
             <TextView
                 android:id="@+id/txtVwUnivName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/imgVwUniv"
-                android:paddingLeft="20dp"
                 android:text="univ name"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="#0F0C0C" />
-
-            <TextView
-                android:id="@+id/txtVwUnivAddress"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txtVwUnivName"
-                android:layout_alignLeft="@id/txtVwUnivName"
-                android:padding="20dp"
-                android:text="univ address"
-                android:textColor="#141313" />
 
 
         </RelativeLayout>

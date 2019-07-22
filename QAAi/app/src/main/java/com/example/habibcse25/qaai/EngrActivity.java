@@ -53,10 +53,10 @@ public class EngrActivity extends AppCompatActivity {
     }
 
     private void initializeData() {
-        EngrUnivCls buet = new EngrUnivCls(R.drawable.buetmini,"BUET");
-        EngrUnivCls kuet = new EngrUnivCls(R.drawable.kuetpic,"KUET");
-        EngrUnivCls ruet = new EngrUnivCls(R.drawable.ruetmini,"RUET");
-        EngrUnivCls cuet = new EngrUnivCls(R.drawable.cuetmini,"CUET");
+        EngrUnivCls buet = new EngrUnivCls(R.drawable.buettrans,"BUET");
+        EngrUnivCls kuet = new EngrUnivCls(R.drawable.kuettrans,"KUET");
+        EngrUnivCls ruet = new EngrUnivCls(R.drawable.ruettrans,"RUET");
+        EngrUnivCls cuet = new EngrUnivCls(R.drawable.cuettrans,"CUET");
 
         engr_univ_list.add(buet);
         engr_univ_list.add(kuet);

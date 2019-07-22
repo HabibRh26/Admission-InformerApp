@@ -42,7 +42,7 @@ public class PublicAdapter extends RecyclerView.Adapter<PublicAdapter.ViewHolder
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         PublicUnivCls publicUniv = publicUnivList.get(position);
 
-        holder.txtUnivAddress.setText(publicUniv.getUnivAddress());
+       // holder.txtUnivAddress.setText(publicUniv.getUnivAddress());
         holder.txtUnivName.setText(publicUniv.getUnivName());
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             holder.imgUniv.setImageDrawable(mCtx.getDrawable(publicUniv.getImgId()));
@@ -67,7 +67,7 @@ public class PublicAdapter extends RecyclerView.Adapter<PublicAdapter.ViewHolder
             super(itemView);
             imgUniv = itemView.findViewById(R.id.imgVwUniv);
             txtUnivName = itemView.findViewById(R.id.txtVwUnivName);
-            txtUnivAddress = itemView.findViewById(R.id.txtVwUnivAddress);
+//            txtUnivAddress = itemView.findViewById(R.id.txtVwUnivAddress);
             layout = itemView.findViewById(R.id.layoutRelative);
 
             this.onItemListen = onItemListen;

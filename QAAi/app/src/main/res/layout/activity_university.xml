@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.habibcse25.qaai.UniversityActivity"
-    android:background="#97E499">
+    android:background="#66bb6a">
 
     <include
         android:id="@+id/univ_toolbar"

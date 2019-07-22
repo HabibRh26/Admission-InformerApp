@@ -8,7 +8,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:padding="10dp"
-        android:src="@drawable/bracu" />
+        android:src="@drawable/bractrans" />
 
     <TextView
         android:id="@+id/VarsityName"
@@ -20,7 +20,8 @@
         android:layout_toEndOf="@+id/imgVwlogo"
         android:layout_toRightOf="@+id/imgVwlogo"
         android:text="BRAC University"
-        android:textColor="#e11111"
+        android:textColor="#000"
+        android:textStyle="bold"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
 </RelativeLayout>

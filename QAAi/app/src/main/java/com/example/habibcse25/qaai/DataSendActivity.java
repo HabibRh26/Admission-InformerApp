@@ -32,18 +32,18 @@ public class DataSendActivity extends AppCompatActivity {
 
     public void saveToFirebaseDB(View view) {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference dbRef = database.getReference("Univ_Circulars");
+        DatabaseReference dbRef = database.getReference("Univ_Engineering");
         String Univ_ID = dbRef.push().child(univ_Name.getText().toString()).getKey();
 
         DataToFirebase dataToFirebase = new DataToFirebase(univ_Name.getText().toString(), univ_details.getText().toString());
         dbRef.child(Univ_ID).setValue(dataToFirebase);
-        Toast.makeText(this,"Circular sent successfully",Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Data sent successfully",Toast.LENGTH_LONG).show();
 
     }
 
     public void saveNoticeFirebase(View view) {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference dbRef = database.getReference("Univ_Notice");
+        DatabaseReference dbRef = database.getReference("Public_Notice");
         String Univ_ID = dbRef.push().child(NoticeUniName.getText().toString()).getKey();
 
         NoticeData_to_firebase noticedataToFirebase = new NoticeData_to_firebase(NoticeUniName.getText().toString(), NoticeDetails.getText().toString());

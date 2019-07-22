@@ -1,6 +1,7 @@
 package com.example.habibcse25.qaai;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
@@ -40,11 +41,28 @@ public class PublicActivity extends AppCompatActivity implements PublicAdapter.I
         recyclerViewUniv.setHasFixedSize(true);
         recyclerViewUniv.setLayoutManager(new LinearLayoutManager(this));
 
-        PublicUnivCls publicUnivObj1 = new PublicUnivCls("daffodil","dhanmondi",R.drawable.daffodil);
-        PublicUnivCls publicUnivObj2 = new PublicUnivCls("UIU","dhanmondi",R.drawable.uiu);
+        PublicUnivCls publicUnivObj1 = new PublicUnivCls("Dhaka University","Dhaka",R.drawable.dutrans);
+        PublicUnivCls publicUnivObj2 = new PublicUnivCls("Jahangirnagar University","savar",R.drawable.jutrans);
+        PublicUnivCls publicUnivObj3 = new PublicUnivCls("Jagannath University","savar",R.drawable.jnutrans);
+        PublicUnivCls publicUnivObj4 = new PublicUnivCls("Chittagong University","savar",R.drawable.cutrans);
+        PublicUnivCls publicUnivObj5 = new PublicUnivCls("Khulna University","savar",R.drawable.kutrans);
+        PublicUnivCls publicUnivObj6 = new PublicUnivCls("Rajshahi University","savar",R.drawable.rutrans);
+        PublicUnivCls publicUnivObj7 = new PublicUnivCls("Comilla University","savar",R.drawable.comtrans);
+        PublicUnivCls publicUnivObj8 = new PublicUnivCls("Barisal University","savar",R.drawable.butranss);
+        PublicUnivCls publicUnivObj9 = new PublicUnivCls("Begum Rokeya University","savar",R.drawable.berobi);
+
+
+
 
         publicUnivList.add(publicUnivObj1);
         publicUnivList.add(publicUnivObj2);
+        publicUnivList.add(publicUnivObj3);
+        publicUnivList.add(publicUnivObj4);
+        publicUnivList.add(publicUnivObj5);
+        publicUnivList.add(publicUnivObj6);
+        publicUnivList.add(publicUnivObj7);
+        publicUnivList.add(publicUnivObj8);
+
 
         recycleAdapter = new PublicAdapter(this,publicUnivList,this);
         recyclerViewUniv.setAdapter(recycleAdapter);
@@ -54,6 +72,9 @@ public class PublicActivity extends AppCompatActivity implements PublicAdapter.I
     @Override
     public void onClickITem(int position) {
         Toast.makeText(this,"new way clicked",Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this,PublicDescActivity.class);
+        intent.putExtra("positionRecycle",position);
+        startActivity(intent);
         Log.d("clicked","clicked");
     }
 }

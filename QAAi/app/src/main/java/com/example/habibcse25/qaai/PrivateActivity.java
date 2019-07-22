@@ -42,11 +42,11 @@ public class PrivateActivity extends AppCompatActivity implements AdapterView.On
     }
 
     private void dataSet() {
-        PunivCls bracu = new PunivCls(R.drawable.bracu,"BRAC University");
-        PunivCls aust = new PunivCls(R.drawable.aust,"AUST");
+        PunivCls bracu = new PunivCls(R.drawable.bractrans,"BRAC University");
+        PunivCls aust = new PunivCls(R.drawable.austtrans,"AUST");
         PunivCls ewu = new PunivCls(R.drawable.ewu,"East West University");
         PunivCls nsu = new PunivCls(R.drawable.nsu,"North South University");
-        PunivCls aiub = new PunivCls(R.drawable.aiub,"AIUB University");
+        PunivCls aiub = new PunivCls(R.drawable.aiubtrans,"AIUB University");
         PunivCls daffodil = new PunivCls(R.drawable.daffodil,"Daffodil University");
         PunivCls uiu = new PunivCls(R.drawable.uiu,"UIU University");
         PunivCls iubat = new PunivCls(R.drawable.iubat,"IUBAT University");
@@ -67,6 +67,7 @@ public class PrivateActivity extends AppCompatActivity implements AdapterView.On
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
         Intent intent = new Intent(PrivateActivity.this,PrivateDescActivity.class);
+        intent.putExtra("position",position);
         startActivity(intent);
 
     }

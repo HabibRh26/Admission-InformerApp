@@ -3,19 +3,20 @@
     android:layout_width="match_parent" android:layout_height="170dp"
     android:background="#388E3C">
     <ImageView
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
         android:id="@+id/nav_header_ImgVw"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/user"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logotrans"
+        android:layout_centerHorizontal="true"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="admission_aid20@gmail.com"
+        android:text="admissionAid20@gmail.com"
         android:textSize="20dp"
         android:textColor="#000"
-        android:layout_alignLeft="@+id/nav_header_ImgVw"
-        android:layout_marginTop="120dp"/>
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/nav_header_ImgVw"/>
 
 </RelativeLayout>

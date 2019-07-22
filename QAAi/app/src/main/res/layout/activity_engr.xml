@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.habibcse25.qaai.EngrActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#66bb6a">
     <include layout="@layout/toolbar"
         android:id="@+id/Engr_univ_toolbar"></include>
 

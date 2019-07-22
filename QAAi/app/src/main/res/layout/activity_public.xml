@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/Public_uni_toolbar"
-        android:background="#F2F7F2"
+        android:background="#66bb6a"
         android:padding="2dp"
         tools:listitem="@layout/recycler_vw_public_list">
 
