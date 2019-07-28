@@ -28,7 +28,7 @@
             android:id="@+id/btnPrivate"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Private University"
+            android:text="Private University Admission"
             android:background="@drawable/rounded_btn_univ_admission"
             android:layout_below="@+id/ImgVwPrivate"
             android:layout_alignLeft="@+id/ImgVwPrivate"
@@ -39,7 +39,7 @@
             android:layout_width="150dp"
             android:layout_height="120dp"
             android:layout_marginTop="200dp"
-
+            android:layout_marginLeft="40dp"
             android:src="@drawable/publicicon"
             android:text="Public University"
             android:layout_alignBottom="@+id/ImgVwPrivate"/>
@@ -48,7 +48,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_btn_univ_admission"
-            android:text="Public University"
+            android:text="Public University Admission"
             android:layout_alignLeft="@+id/ImgVwPublic"
             android:layout_below="@+id/ImgVwPublic" />
 
@@ -70,7 +70,7 @@
             android:layout_alignLeft="@+id/ImgVwEngr"
             android:layout_marginLeft="0dp"
             android:background="@drawable/rounded_btn_univ_admission"
-            android:text="Engineering University" />
+            android:text="Engineering Admission" />
 
         <ImageView
             android:id="@+id/imgVwMed"
@@ -84,7 +84,7 @@
             android:id="@+id/btnMedi"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Medical College"
+            android:text="Medical Admission"
             android:layout_alignLeft="@+id/ImgVwPrivate"
             android:layout_below="@+id/imgVwMed"
             android:background="@drawable/rounded_btn_univ_admission"/>

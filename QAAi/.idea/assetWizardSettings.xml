@@ -29,12 +29,24 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                      <entry key="clipartAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/social/ic_share_black_24dp.xml" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
                                     </map>
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="theme" value="HOLO_DARK" />
-                                      <entry key="themeColor" value="ffffff" />
+                                      <entry key="outputName" value="icon_share" />
+                                      <entry key="theme" value="CUSTOM" />
+                                      <entry key="themeColor" value="388e3c" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -62,11 +74,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="327d26" />
-                                      <entry key="backgroundLayerName" value="icon_launcher_background" />
-                                      <entry key="foregroundImage" value="C:\Users\HabibCseJu25\Desktop\ps prac\imageUniv\logotrans.png" />
-                                      <entry key="foregroundLayerName" value="icon_launcher_foreground" />
-                                      <entry key="outputName" value="icon_launch" />
+                                      <entry key="foregroundImage" value="C:\Users\HabibCseJu25\Desktop\ps prac\imageUniv\logomain.png" />
+                                      <entry key="outputName" value="icon_logo" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -116,6 +125,11 @@
                             </entry>
                           </map>
                         </option>
+                        <option name="values">
+                          <map>
+                            <entry key="outputIconType" value="ACTIONBAR" />
+                          </map>
+                        </option>
                       </PersistentState>
                     </value>
                   </entry>
@@ -139,7 +153,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/social/ic_person_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/communication/ic_contact_mail_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -149,8 +163,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="e8e212" />
-                            <entry key="outputName" value="ic_user_icon_nav_24dp" />
+                            <entry key="color" value="388e3c" />
+                            <entry key="outputName" value="ic_contact_24dp" />
                             <entry key="sourceFile" value="F:\icons\icon.svg" />
                           </map>
                         </option>

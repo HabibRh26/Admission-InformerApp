@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavView = findViewById(R.id.NavView);
         NavView.setNavigationItemSelectedListener(this);
+        NavView.setItemIconTintList(null);
         mDrawerLay = findViewById(R.id.nav_drawerLay);
         mToggle = new ActionBarDrawerToggle(MainActivity.this, mDrawerLay, R.string.open, R.string.close);
         mDrawerLay.addDrawerListener(mToggle);
@@ -78,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         switch (item.getItemId()) {
             case R.id.settings:
-                Toast.makeText(this, "you clicked for settigns", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "you clicked for settings", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.refresh:
                 Toast.makeText(this, "you clicked for refresh", Toast.LENGTH_SHORT).show();
@@ -112,10 +113,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.nav_rate_app:
-                Toast.makeText(this, "rate app clicked!", Toast.LENGTH_SHORT).show();
+            case R.id.nav_share_app:
+                Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                shareIntent.setType("text/plain");
+                shareIntent.putExtra(Intent.EXTRA_TEXT,"www.shareintent.com");
+                startActivity(Intent.createChooser(shareIntent,"Share Using"));
                 break;
-            case R.id.nav_settings:
+            case R.id.nav_aboutUs:
                 Toast.makeText(this,"setting clicked",Toast.LENGTH_LONG).show();
                 break;
             case R.id.nav_FeedBack:

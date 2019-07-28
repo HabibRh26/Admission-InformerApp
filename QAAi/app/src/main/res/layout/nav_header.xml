@@ -8,12 +8,13 @@
         android:id="@+id/nav_header_ImgVw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/logotrans"
+        android:src="@mipmap/icon_logo"
         android:layout_centerHorizontal="true"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="admissionAid20@gmail.com"
+        android:text="Admission Aid"
+        android:layout_centerHorizontal="true"
         android:textSize="20dp"
         android:textColor="#000"
         android:layout_marginLeft="5dp"

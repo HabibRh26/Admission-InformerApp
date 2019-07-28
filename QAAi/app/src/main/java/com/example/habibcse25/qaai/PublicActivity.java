@@ -52,8 +52,6 @@ public class PublicActivity extends AppCompatActivity implements PublicAdapter.I
         PublicUnivCls publicUnivObj9 = new PublicUnivCls("Begum Rokeya University","savar",R.drawable.berobi);
 
 
-
-
         publicUnivList.add(publicUnivObj1);
         publicUnivList.add(publicUnivObj2);
         publicUnivList.add(publicUnivObj3);
@@ -62,6 +60,7 @@ public class PublicActivity extends AppCompatActivity implements PublicAdapter.I
         publicUnivList.add(publicUnivObj6);
         publicUnivList.add(publicUnivObj7);
         publicUnivList.add(publicUnivObj8);
+        publicUnivList.add(publicUnivObj9);
 
 
         recycleAdapter = new PublicAdapter(this,publicUnivList,this);
