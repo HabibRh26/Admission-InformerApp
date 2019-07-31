@@ -73,7 +73,7 @@
             android:text="Engineering University" />
 
         <ImageView
-            android:id="@+id/imgVwMed"
+            android:id="@+id/imgVwMedical"
             android:layout_width="150dp"
             android:layout_height="120dp"
             android:layout_below="@+id/btnPrivate"
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
             android:text="Medical College"
             android:layout_alignLeft="@+id/ImgVwPrivate"
-            android:layout_below="@+id/imgVwMed"
+            android:layout_below="@+id/imgVwMedical"
             android:background="@drawable/rounded_btn_univ_admission"/>
     </RelativeLayout>
 

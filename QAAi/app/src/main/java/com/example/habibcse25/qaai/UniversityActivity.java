@@ -8,6 +8,8 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
@@ -18,10 +20,10 @@ import android.widget.TextView;
 
 public class UniversityActivity extends AppCompatActivity implements View.OnClickListener{
     Dialog connection_error_Dialog;
-    ImageView imgVwConnectionDialog_error,imgVwConnectionDialog_close,ImgVwPublic,ImgVwPrivate,ImgVwEngr;
+    ImageView imgVwConnectionDialog_error,imgVwConnectionDialog_close,ImgVwPublic,ImgVwPrivate,ImgVwEngr,ImgVwMed;
     TextView txtvw_net_connection_Title;
-    Button btnPublic,btnPrivate,btnEngr,btn_connection_error;
-    Intent intentPublic,intentPrivate,intentEngr;
+    Button btnPublic,btnPrivate,btnEngr,btn_connection_error,btnMed;
+    Intent intentPublic,intentPrivate,intentEngr,intentMedical;
     Toolbar toolbarUniv;
 
     @Override
@@ -35,13 +37,17 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
         ImgVwEngr = findViewById(R.id.ImgVwEngr);
         btnPrivate = findViewById(R.id.btnPrivate);
         ImgVwPrivate = findViewById(R.id.ImgVwPrivate);
+        btnMed = findViewById(R.id.btnMedi);
+        ImgVwMed = findViewById(R.id.imgVwMedical);
 
         btnPublic.setOnClickListener(this);
         btnEngr.setOnClickListener(this);
         btnPrivate.setOnClickListener(this);
+        btnMed.setOnClickListener(this);
         ImgVwPublic.setOnClickListener(this);
         ImgVwEngr.setOnClickListener(this);
         ImgVwPrivate.setOnClickListener(this);
+        ImgVwMed.setOnClickListener(this);
 
 
         toolbarUniv = findViewById(R.id.univ_toolbar);
@@ -57,6 +63,20 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
 
                 intentPublic = new Intent(this,PublicActivity.class);
                 startActivity(intentPublic);
+
+            }
+            else {
+
+                showDialog();
+            }
+
+
+        }
+        else if(view.getId() == R.id.imgVwMedical){
+            if (check_Internet_Connection()) {
+
+                 intentMedical = new Intent(Intent.ACTION_VIEW, Uri.parse("https://drive.google.com/drive/folders/12kG0MFukZyZJH0OmCPk5_kch100fEfO1"));
+                startActivity(intentMedical);
 
             }
             else {
@@ -113,6 +133,20 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
 
                 intentPrivate = new Intent(this,PrivateActivity.class);
                 startActivity(intentPrivate);
+
+            }
+            else {
+
+                showDialog();
+            }
+
+
+        }
+        else if(view.getId()==R.id.btnMedi){
+            if (check_Internet_Connection()) {
+
+                intentMedical = new Intent(Intent.ACTION_VIEW, Uri.parse("https://drive.google.com/drive/folders/12kG0MFukZyZJH0OmCPk5_kch100fEfO1"));
+                startActivity(intentMedical);
 
             }
             else {
