@@ -32,7 +32,7 @@ public class DataSendActivity extends AppCompatActivity {
 
     public void saveToFirebaseDB(View view) {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference dbRef = database.getReference("Univ_Engineering");
+        DatabaseReference dbRef = database.getReference("Univ_Private");
         String Univ_ID = dbRef.push().child(univ_Name.getText().toString()).getKey();
 
         DataToFirebase dataToFirebase = new DataToFirebase(univ_Name.getText().toString(), univ_details.getText().toString());

@@ -12,7 +12,10 @@
         android:roundIcon="@mipmap/icon_logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PublicDescActivity"></activity>
+        <activity android:name=".NavFeedbackActivity"></activity>
+        <activity android:name=".NavHelpActivity" />
+        <activity android:name=".AboutUsActivity" />
+        <activity android:name=".PublicDescActivity" />
         <activity android:name=".NoticeActivity">
             <intent-filter>
                 <action android:name="NoticeActivity" />

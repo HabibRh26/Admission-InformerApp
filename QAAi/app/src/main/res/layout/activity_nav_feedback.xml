@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NavFeedbackActivity"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FeedBack"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:gravity="center_horizontal"
+        android:textColor="#000"
+        />
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share your Thoughts To"
+        android:textStyle="italic"
+        android:textSize="25sp"
+        android:gravity="center_horizontal"
+        android:textColor="#000"/>
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgVwMail"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/mail"
+            android:layout_margin="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgVwMail"
+            android:id="@+id/txtVwMail"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:text="admissionaid20@gmail.com"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

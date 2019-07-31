@@ -13,16 +13,25 @@
             android:id="@+id/EngrDesc_univ_toolbar"></include>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
             <TextView
                 android:id="@+id/txtvwVarsity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:gravity="center" />
 
             <TextView
                 android:id="@+id/txtvwVarsity2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="loading. . ."
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000"  />
 
 
         </LinearLayout>

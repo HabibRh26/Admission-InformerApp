@@ -3,17 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
     <item android:id="@+id/nav_share_app"
-        android:title="share App"
+        android:title="Share App"
         android:icon="@drawable/ic_share_24dp"></item>
 
     <item android:id="@+id/nav_admin"
-        android:title="admin"
+        android:title="Admin"
         android:icon="@drawable/ic_admin_black_24dp"></item>
 
     <item android:id="@+id/nav_FeedBack"
         android:title="FeedBack"
         android:icon="@drawable/ic_contact_24dp"></item>
-    <item android:id="@+id/nav_help" android:title="help"
+    <item android:id="@+id/nav_help"
+        android:title="Help"
         android:icon="@drawable/ic_help_24dp"></item>
     <item android:id="@+id/nav_aboutUs"
         android:title="About Us"

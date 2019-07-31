@@ -43,7 +43,7 @@ public class EngrDescriptionActivity extends AppCompatActivity {
                         DataToFirebase univ_Name = dataSnapshot.getValue(DataToFirebase.class);
                         DataToFirebase univ_details  = dataSnapshot.getValue(DataToFirebase.class);
 
-                        textengr1.setText(univ_Name.getuniv_Name()+": ");
+                        textengr1.setText(univ_Name.getuniv_Name());
                         textengr2.setText(univ_details.getuniv_details());
 
                     }
@@ -63,7 +63,7 @@ public class EngrDescriptionActivity extends AppCompatActivity {
                     DataToFirebase univ_details  = dataSnapshot.getValue(DataToFirebase.class);
 
 
-                    textengr1.setText(univ_Name.getuniv_Name()+": ");
+                    textengr1.setText(univ_Name.getuniv_Name());
                     textengr2.setText(univ_details.getuniv_details());
 
 
@@ -78,14 +78,14 @@ public class EngrDescriptionActivity extends AppCompatActivity {
 
         }
             else if(index ==2){
-                dbRef.child("BUET").addListenerForSingleValueEvent(new ValueEventListener() {
+                dbRef.child("RUET").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         DataToFirebase univ_Name = dataSnapshot.getValue(DataToFirebase.class);
                         DataToFirebase univ_details  = dataSnapshot.getValue(DataToFirebase.class);
 
 
-                        textengr1.setText(univ_Name.getuniv_Name()+": ");
+                        textengr1.setText(univ_Name.getuniv_Name());
                         textengr2.setText(univ_details.getuniv_details());
 
                     }
@@ -98,14 +98,14 @@ public class EngrDescriptionActivity extends AppCompatActivity {
 
             }
             else if(index ==3){
-                dbRef.child("BUET").addListenerForSingleValueEvent(new ValueEventListener() {
+                dbRef.child("CUET").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         DataToFirebase univ_Name = dataSnapshot.getValue(DataToFirebase.class);
                         DataToFirebase univ_details  = dataSnapshot.getValue(DataToFirebase.class);
 
 
-                        textengr1.setText(univ_Name.getuniv_Name()+": ");
+                        textengr1.setText(univ_Name.getuniv_Name());
                         textengr2.setText(univ_details.getuniv_details());
 
                     }
@@ -117,10 +117,6 @@ public class EngrDescriptionActivity extends AppCompatActivity {
                 });
 
             }
-
-
-
-
         }
 
     }

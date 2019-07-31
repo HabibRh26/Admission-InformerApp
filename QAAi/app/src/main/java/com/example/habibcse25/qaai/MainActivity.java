@@ -120,13 +120,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(Intent.createChooser(shareIntent,"Share Using"));
                 break;
             case R.id.nav_aboutUs:
-                Toast.makeText(this,"setting clicked",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(this, AboutUsActivity.class);
+                startActivity(intent);
                 break;
             case R.id.nav_FeedBack:
-                Toast.makeText(this,"feedback clicked",Toast.LENGTH_LONG).show();
+                Intent intentFeedback = new Intent(this, NavFeedbackActivity.class);
+                startActivity(intentFeedback);
+                break;
             case R.id.nav_admin:
-                Intent intent = new Intent(this, Admin_Activity.class);
-                startActivity(intent);
+                Intent intentAdmin = new Intent(this, Admin_Activity.class);
+                startActivity(intentAdmin);
+                break;
         }
 
         return true;

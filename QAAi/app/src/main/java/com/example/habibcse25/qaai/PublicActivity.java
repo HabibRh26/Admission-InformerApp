@@ -70,10 +70,10 @@ public class PublicActivity extends AppCompatActivity implements PublicAdapter.I
 
     @Override
     public void onClickITem(int position) {
-        Toast.makeText(this,"new way clicked",Toast.LENGTH_LONG).show();
+
         Intent intent = new Intent(this,PublicDescActivity.class);
-        intent.putExtra("positionRecycle",position);
+        intent.putExtra("positionMain",position);
         startActivity(intent);
-        Log.d("clicked","clicked");
+
     }
 }

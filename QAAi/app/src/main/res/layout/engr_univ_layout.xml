@@ -9,12 +9,12 @@
         android:id="@+id/engr_uni_img"
         android:layout_width="200dp"
         android:layout_height="150dp"
-        android:src="@mipmap/icon_launch"/>
+        android:src="@drawable/buettrans"/>
 
     <TextView
-        android:text="hello"
+        android:text="Buet"
         android:id="@+id/engr_uni_name"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:textSize="22sp"
         android:textStyle="bold"

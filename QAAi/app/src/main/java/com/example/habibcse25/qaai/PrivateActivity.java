@@ -42,20 +42,20 @@ public class PrivateActivity extends AppCompatActivity implements AdapterView.On
         PunivCls aust = new PunivCls(R.drawable.austtrans,"AUST");
         PunivCls ewu = new PunivCls(R.drawable.ewutrans,"East West University");
         PunivCls nsu = new PunivCls(R.drawable.nsutrans,"North South University");
-        PunivCls aiub = new PunivCls(R.drawable.aiubtrans,"AIUB University");
-        PunivCls daffodil = new PunivCls(R.drawable.diutrans,"Daffodil University");
-        PunivCls uiu = new PunivCls(R.drawable.uiutrans,"UIU University");
-        PunivCls iubat = new PunivCls(R.drawable.iubattrans,"IUBAT University");
+        PunivCls aiub = new PunivCls(R.drawable.aiubtrans,"AIUB");
+        PunivCls daffodil = new PunivCls(R.drawable.diutrans,"Daffodil International University");
+        PunivCls uiu = new PunivCls(R.drawable.uiutrans,"United International University");
+        PunivCls iubat = new PunivCls(R.drawable.iubattrans,"IUBAT");
 
 
-        arrayListPunivCls.add(bracu);
-        arrayListPunivCls.add(aust);
-        arrayListPunivCls.add(ewu);
-        arrayListPunivCls.add(nsu);
         arrayListPunivCls.add(aiub);
+        arrayListPunivCls.add(aust);
+        arrayListPunivCls.add(bracu);
         arrayListPunivCls.add(daffodil);
-        arrayListPunivCls.add(uiu);
+        arrayListPunivCls.add(ewu);
         arrayListPunivCls.add(iubat);
+        arrayListPunivCls.add(nsu);
+        arrayListPunivCls.add(uiu);
 
     }
 
