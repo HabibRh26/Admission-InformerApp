@@ -2,24 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/bottomNavHome1"
+        android:id="@+id/bottomNavHome"
         android:title="Home"
         android:icon="@drawable/ic_home_black_24dp"/>
     <item
-        android:id="@+id/bottomNavHome2"
+        android:id="@+id/bottomNavNotice"
         android:title="notice"
         android:icon="@drawable/ic_notice"/>
 
     <item
-        android:id="@+id/bottomNavHome3"
+        android:id="@+id/bottomNavEligibility"
         android:title="eligibility"
         android:icon="@drawable/ic_eligibility"/>
     <item
-        android:id="@+id/bottomNavHome4"
+        android:id="@+id/bottomNavApply"
         android:title="apply"
         android:icon="@drawable/ic_apply"/>
     <item
-        android:id="@+id/bottomNavHome5"
+        android:id="@+id/bottomNavCircular"
         android:title="circular"
         android:icon="@drawable/ic_circular"/>
 

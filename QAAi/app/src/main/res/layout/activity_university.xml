@@ -103,9 +103,12 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:background="#388E3C"
-            app:itemIconTint="#000"
+            app:itemIconTint="@drawable/bottom_nav_color"
             app:menu="@menu/bottom_navigation"
-            app:labelVisibilityMode="labeled"></com.google.android.material.bottomnavigation.BottomNavigationView>
+            app:labelVisibilityMode="labeled"
+            app:itemTextColor="@drawable/bottom_nav_color">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
     </RelativeLayout>
 
 

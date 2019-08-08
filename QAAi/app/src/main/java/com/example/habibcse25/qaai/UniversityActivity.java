@@ -7,6 +7,8 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.net.Uri;
@@ -36,7 +38,7 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_university);
 
-       btnPublic = findViewById(R.id.btnPublic);
+        btnPublic = findViewById(R.id.btnPublic);
         ImgVwPublic = findViewById(R.id.ImgVwPublic);
         btnEngr = findViewById(R.id.btnEngr);
         ImgVwEngr = findViewById(R.id.ImgVwEngr);
@@ -46,8 +48,8 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
         ImgVwMed = findViewById(R.id.imgVwMedical);
 
         BottomNavigationView bottomNavView = findViewById(R.id.bottomNav);
-       // bottomNavView.setOnNavigationItemSelectedListener(navItemListener);
-        //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Home1Fragment()).commit();
+        bottomNavView.setOnNavigationItemSelectedListener(navItemListener);
+
 
 
         btnPublic.setOnClickListener(this);
@@ -66,31 +68,38 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-   /* private  BottomNavigationView.OnNavigationItemSelectedListener navItemListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+    private  BottomNavigationView.OnNavigationItemSelectedListener navItemListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
             Fragment selectedFragment = null;
             switch(menuItem.getItemId()){
-                case R.id.bottomNavHome1:
-                    selectedFragment = new Home1Fragment();
+
+                case R.id.bottomNavHome:
+                    Intent intentHome = new Intent(UniversityActivity.this,MainActivity.class);
+                    startActivity(intentHome);
                     break;
-                case R.id.bottomNavHome2:
-                    selectedFragment = new Home2Fragment();
+
+                case R.id.bottomNavNotice:
+                    Intent intentNotice = new Intent(UniversityActivity.this,MainActivity.class);
+                    startActivity(intentNotice);
                     break;
-                case R.id.bottomNavHome3:
-                    selectedFragment = new Home3Fragment();
+                case R.id.bottomNavEligibility:
+                    Intent intentEligibility = new Intent(Intent.ACTION_VIEW,Uri.parse("https://drive.google.com/drive/folders/1Fqlf4IpJVph84ocA7rc2sSqQxWM4zNtV?usp=sharing"));
+                    startActivity(intentEligibility);
                     break;
-                case R.id.bottomNavHome4:
-                    selectedFragment = new Home4Fragment();
+                case R.id.bottomNavApply:
+                    Intent intentApply = new Intent(UniversityActivity.this,MainActivity.class);
+                    startActivity(intentApply);
                     break;
-                case R.id.bottomNavHome5:
-                    selectedFragment = new Home5Fragment();
+                case R.id.bottomNavCircular:
+                    Intent intentCircular = new Intent(Intent.ACTION_VIEW,Uri.parse("https://drive.google.com/drive/folders/15ZKE0XgrK7WD7cuWhaVmHzUaesE__7a-"));
+                    startActivity(intentCircular);
                     break;
             }
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
+
             return true;
         }
-    };*/
+    };
 
     @Override
     public void onClick(View view) {
