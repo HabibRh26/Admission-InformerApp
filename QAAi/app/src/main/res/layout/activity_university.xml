@@ -15,6 +15,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </FrameLayout>
 
         <ImageView
 
@@ -24,33 +29,35 @@
             android:layout_marginLeft="240dp"
             android:layout_marginTop="200dp"
             android:src="@drawable/privateicon" />
+
         <Button
             android:id="@+id/btnPrivate"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Private University"
-            android:background="@drawable/rounded_btn_univ_admission"
             android:layout_below="@+id/ImgVwPrivate"
             android:layout_alignLeft="@+id/ImgVwPrivate"
-            android:layout_alignBottom="@+id/btnPublic"/>
+            android:layout_alignBottom="@+id/btnPublic"
+            android:background="@drawable/rounded_btn_univ_admission"
+            android:text="Private University" />
 
         <ImageView
             android:id="@+id/ImgVwPublic"
             android:layout_width="150dp"
             android:layout_height="120dp"
-            android:layout_marginTop="200dp"
+            android:layout_alignBottom="@+id/ImgVwPrivate"
 
+            android:layout_marginTop="200dp"
             android:src="@drawable/publicicon"
-            android:text="Public University"
-            android:layout_alignBottom="@+id/ImgVwPrivate"/>
+            android:text="Public University" />
+
         <Button
             android:id="@+id/btnPublic"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_btn_univ_admission"
-            android:text="Public University"
+            android:layout_below="@+id/ImgVwPublic"
             android:layout_alignLeft="@+id/ImgVwPublic"
-            android:layout_below="@+id/ImgVwPublic" />
+            android:background="@drawable/rounded_btn_univ_admission"
+            android:text="Public University" />
 
         <ImageView
 
@@ -59,8 +66,8 @@
             android:layout_height="120dp"
             android:layout_below="@+id/btnPrivate"
             android:layout_alignLeft="@+id/ImgVwPublic"
-            android:layout_alignBottom="@+id/imgVwMed"
-            android:src="@drawable/engricon"/>
+            android:layout_alignBottom="@+id/imgVwMedical"
+            android:src="@drawable/engricon" />
 
         <Button
             android:id="@+id/btnEngr"
@@ -80,14 +87,25 @@
             android:layout_alignLeft="@+id/ImgVwPrivate"
             android:layout_marginLeft="2dp"
             android:src="@drawable/med" />
+
         <Button
             android:id="@+id/btnMedi"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Medical College"
-            android:layout_alignLeft="@+id/ImgVwPrivate"
             android:layout_below="@+id/imgVwMedical"
-            android:background="@drawable/rounded_btn_univ_admission"/>
+            android:layout_alignLeft="@+id/ImgVwPrivate"
+            android:background="@drawable/rounded_btn_univ_admission"
+            android:text="Medical College" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#388E3C"
+            app:itemIconTint="#000"
+            app:menu="@menu/bottom_navigation"
+            app:labelVisibilityMode="labeled"></com.google.android.material.bottomnavigation.BottomNavigationView>
     </RelativeLayout>
 
 

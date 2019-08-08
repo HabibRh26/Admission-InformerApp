@@ -12,11 +12,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.net.Uri;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class UniversityActivity extends AppCompatActivity implements View.OnClickListener{
     Dialog connection_error_Dialog;
@@ -40,6 +45,11 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
         btnMed = findViewById(R.id.btnMedi);
         ImgVwMed = findViewById(R.id.imgVwMedical);
 
+        BottomNavigationView bottomNavView = findViewById(R.id.bottomNav);
+       // bottomNavView.setOnNavigationItemSelectedListener(navItemListener);
+        //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Home1Fragment()).commit();
+
+
         btnPublic.setOnClickListener(this);
         btnEngr.setOnClickListener(this);
         btnPrivate.setOnClickListener(this);
@@ -55,6 +65,32 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
         getSupportActionBar().setTitle("University Categories");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
+
+   /* private  BottomNavigationView.OnNavigationItemSelectedListener navItemListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+            Fragment selectedFragment = null;
+            switch(menuItem.getItemId()){
+                case R.id.bottomNavHome1:
+                    selectedFragment = new Home1Fragment();
+                    break;
+                case R.id.bottomNavHome2:
+                    selectedFragment = new Home2Fragment();
+                    break;
+                case R.id.bottomNavHome3:
+                    selectedFragment = new Home3Fragment();
+                    break;
+                case R.id.bottomNavHome4:
+                    selectedFragment = new Home4Fragment();
+                    break;
+                case R.id.bottomNavHome5:
+                    selectedFragment = new Home5Fragment();
+                    break;
+            }
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
+            return true;
+        }
+    };*/
 
     @Override
     public void onClick(View view) {
