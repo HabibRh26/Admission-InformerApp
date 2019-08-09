@@ -80,7 +80,7 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
                     break;
 
                 case R.id.bottomNavNotice:
-                    Intent intentNotice = new Intent(UniversityActivity.this,MainActivity.class);
+                    Intent intentNotice = new Intent(Intent.ACTION_VIEW,Uri.parse("https://drive.google.com/drive/folders/1tX7jgstWDoj9p7h5mAHIaKBwNklUbO10"));
                     startActivity(intentNotice);
                     break;
                 case R.id.bottomNavEligibility:
@@ -88,7 +88,7 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
                     startActivity(intentEligibility);
                     break;
                 case R.id.bottomNavApply:
-                    Intent intentApply = new Intent(UniversityActivity.this,MainActivity.class);
+                    Intent intentApply = new Intent(Intent.ACTION_VIEW,Uri.parse("https://drive.google.com/drive/folders/1PB5SIjRhXNhfDa7EMZluL3dSKw9_dQ8N"));
                     startActivity(intentApply);
                     break;
                 case R.id.bottomNavCircular:
