@@ -6,12 +6,5 @@
         android:title="settings"
         android:icon="@drawable/settings"
         app:showAsAction="never"></item>
-    <item
-        android:id="@+id/refresh"
-        android:title="refresh"
-        android:icon="@drawable/refresh"
-        app:showAsAction="never">
-
-    </item>
 
 </menu>

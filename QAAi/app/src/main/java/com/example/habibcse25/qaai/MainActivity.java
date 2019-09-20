@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         btnVarsity.setOnClickListener((OnClickListener) this);
 //        btnCollege.setOnClickListener(this);
      //   registerbtn.setOnClickListener(this);
-      //  admin_section_btn.setOnClickListener(this);
+       // admin_section_btn.setOnClickListener(this);
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -62,27 +62,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
     }
-
-
-    @Override
+/*    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return super.onCreateOptionsMenu(menu);
-    }
+    }*/
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (mToggle.onOptionsItemSelected(item)) {
 
             return true;
-        }
-
-        switch (item.getItemId()) {
-            case R.id.settings:
-                Toast.makeText(this, "you clicked for settings", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.refresh:
-                Toast.makeText(this, "you clicked for refresh", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -101,13 +91,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             intent3 = new Intent(this, RegActivity.class);
             startActivity(intent3);
         } */
-      /*  else if (view.getId() == R.id.admin_section_btn) {
+       /* else if (view.getId() == R.id.admin_section_btn) {
             Intent intent = new Intent(this, Admin_Activity.class);
             startActivity(intent);
 
         }*/
-
-
     }
 
     @Override

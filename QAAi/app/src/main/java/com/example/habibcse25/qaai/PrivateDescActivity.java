@@ -3,6 +3,7 @@ package com.example.habibcse25.qaai;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -106,7 +107,7 @@ Intent intent;
 
         }
         if(index ==4){
-            dbRef.child("EAST WEST").addListenerForSingleValueEvent(new ValueEventListener() {
+           /* dbRef.child("EAST WEST").addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     DataToFirebase univ_Name = dataSnapshot.getValue(DataToFirebase.class);
@@ -119,7 +120,9 @@ Intent intent;
                 public void onCancelled(DatabaseError databaseError) {
 
                 }
-            });
+            });*/
+           Intent intentEwu = new Intent(Intent.ACTION_VIEW, Uri.parse("https://drive.google.com/drive/folders/1RDau-uZYdDH7zQBu-3crm22j25eW4Ml5"));
+           startActivity(intentEwu);
 
         }
         if(index ==5){

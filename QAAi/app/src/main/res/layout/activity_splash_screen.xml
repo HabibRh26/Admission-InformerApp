@@ -9,9 +9,9 @@
     android:background="@color/colorPrimary">
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/icon_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/idea"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"/>
 

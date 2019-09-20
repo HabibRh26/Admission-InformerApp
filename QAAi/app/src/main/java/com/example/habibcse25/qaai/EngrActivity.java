@@ -22,8 +22,6 @@ public class EngrActivity extends AppCompatActivity {
     Intent intent;
     Toolbar Engr_univ_toolbar;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,8 +45,6 @@ public class EngrActivity extends AppCompatActivity {
         setSupportActionBar(Engr_univ_toolbar);
         getSupportActionBar().setTitle("Engineering Universities");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
 
     }
 

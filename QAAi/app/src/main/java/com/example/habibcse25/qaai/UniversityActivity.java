@@ -27,9 +27,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class UniversityActivity extends AppCompatActivity implements View.OnClickListener{
     Dialog connection_error_Dialog;
-    ImageView imgVwConnectionDialog_error,imgVwConnectionDialog_close,ImgVwPublic,ImgVwPrivate,ImgVwEngr,ImgVwMed;
+    ImageView imgVwConnectionDialog_error,imgVwConnectionDialog_close,ImgVwPublic,ImgVwPrivate,ImgVwEngr,ImgVwMed,ImgVwSciTech,ImgVwAgriculture;
     TextView txtvw_net_connection_Title;
-    Button btnPublic,btnPrivate,btnEngr,btn_connection_error,btnMed;
+    Button btnPublic,btnPrivate,btnEngr,btn_connection_error,btnMed,btnSciTech,btnAgri;
     Intent intentPublic,intentPrivate,intentEngr,intentMedical;
     Toolbar toolbarUniv;
 
@@ -46,20 +46,26 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
         ImgVwPrivate = findViewById(R.id.ImgVwPrivate);
         btnMed = findViewById(R.id.btnMedi);
         ImgVwMed = findViewById(R.id.imgVwMedical);
+        btnSciTech = findViewById(R.id.btnSciTech);
+        ImgVwSciTech = findViewById(R.id.ImgVwSciTech);
+        btnAgri = findViewById(R.id.btnAgriculture);
+        ImgVwAgriculture = findViewById(R.id.ImgVwAgriculture);
 
         BottomNavigationView bottomNavView = findViewById(R.id.bottomNav);
         bottomNavView.setOnNavigationItemSelectedListener(navItemListener);
-
-
 
         btnPublic.setOnClickListener(this);
         btnEngr.setOnClickListener(this);
         btnPrivate.setOnClickListener(this);
         btnMed.setOnClickListener(this);
+        btnSciTech.setOnClickListener(this);
+        btnAgri.setOnClickListener(this);
         ImgVwPublic.setOnClickListener(this);
         ImgVwEngr.setOnClickListener(this);
         ImgVwPrivate.setOnClickListener(this);
         ImgVwMed.setOnClickListener(this);
+        ImgVwSciTech.setOnClickListener(this);
+        ImgVwAgriculture.setOnClickListener(this);
 
 
         toolbarUniv = findViewById(R.id.univ_toolbar);
@@ -131,6 +137,58 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
 
 
         }
+        else if(view.getId()==R.id.ImgVwSciTech){
+            if (check_Internet_Connection()) {
+
+               Intent intentSciTech = new Intent(Intent.ACTION_VIEW,Uri.parse("https://drive.google.com/drive/folders/1s6M8Qsd6C-rFD6iAWkC7kKvyg4KoAZZ_"));
+                startActivity(intentSciTech);
+
+            }
+            else {
+
+                showDialog();
+            }
+
+
+        }
+        else if(view.getId()==R.id.btnSciTech){
+            if (check_Internet_Connection()) {
+
+                Intent intentSciTech = new Intent(Intent.ACTION_VIEW,Uri.parse("https://drive.google.com/drive/folders/1s6M8Qsd6C-rFD6iAWkC7kKvyg4KoAZZ_"));
+                startActivity(intentSciTech);
+
+            }
+            else {
+
+                showDialog();
+            }
+        }
+        else if(view.getId()==R.id.ImgVwAgriculture){
+            if (check_Internet_Connection()) {
+
+                Intent intentAgriculture = new Intent(Intent.ACTION_VIEW,Uri.parse("https://drive.google.com/drive/folders/1pnUshJO9u2xEVwJZ2lsX_7cvssny6iSp"));
+                startActivity(intentAgriculture);
+            }
+            else {
+
+                showDialog();
+            }
+        }
+        else if(view.getId()==R.id.btnAgriculture){
+            if (check_Internet_Connection()) {
+
+                Intent intentAgriculture = new Intent(Intent.ACTION_VIEW,Uri.parse("https://drive.google.com/drive/folders/1pnUshJO9u2xEVwJZ2lsX_7cvssny6iSp"));
+                startActivity(intentAgriculture);
+
+            }
+            else {
+
+                showDialog();
+            }
+
+
+        }
+
         else if(view.getId()==R.id.ImgVwEngr){
 
             if (check_Internet_Connection()) {

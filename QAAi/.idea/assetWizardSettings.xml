@@ -63,7 +63,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="scalingPercent" value="69" />
+                                                <entry key="scalingPercent" value="67" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -74,8 +74,11 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="foregroundImage" value="C:\Users\HabibCseJu25\Desktop\ps prac\imageUniv\logomain.png" />
-                                      <entry key="outputName" value="icon_logo" />
+                                      <entry key="backgroundColor" value="388e3c" />
+                                      <entry key="backgroundLayerName" value="ic_logo_main_background" />
+                                      <entry key="foregroundImage" value="C:\Users\HabibCseJu25\Desktop\ali\idea.png" />
+                                      <entry key="foregroundLayerName" value="ic_idea_foreground" />
+                                      <entry key="outputName" value="icon_idea" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -123,11 +126,6 @@
                                 </PersistentState>
                               </value>
                             </entry>
-                          </map>
-                        </option>
-                        <option name="values">
-                          <map>
-                            <entry key="outputIconType" value="ACTIONBAR" />
                           </map>
                         </option>
                       </PersistentState>

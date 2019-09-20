@@ -44,11 +44,10 @@ public class MyFirebaseMsgService extends FirebaseMessagingService {
         // Check if message contains a notification payload.
         if (remoteMessage.getNotification() != null) {
             String title = remoteMessage.getNotification().getTitle(); //get title
-            String message = remoteMessage.getNotification().getBody(); //get message
+           String messageUrl = remoteMessage.getNotification().getBody(); //get message
             String click_action = remoteMessage.getNotification().getClickAction(); //get click_action
+            sendNotification(title, messageUrl,click_action);
 
-
-            sendNotification(title, message,click_action);
         }
     }
 
@@ -56,6 +55,7 @@ public class MyFirebaseMsgService extends FirebaseMessagingService {
 
     private void sendNotification(String title, String messageBody, String click_action) {
         Intent intent;
+
         if(click_action.equals("NoticeActivity")){
             intent = new Intent(this, NoticeActivity.class);
           //  intent.putExtra("univName",title);
@@ -64,7 +64,9 @@ public class MyFirebaseMsgService extends FirebaseMessagingService {
         else if(click_action.equals("MAINACTIVITY")){
             intent = new Intent(this, MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        }else{
+        }
+        else{
+
             intent = new Intent(this, MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         }
@@ -75,6 +77,9 @@ public class MyFirebaseMsgService extends FirebaseMessagingService {
             manager.createNotificationChannel(channel);
         }
 
+       /* intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("https://www.google.com/search?ei=YLtqXc2_CIvWvgS17ovYDw&q=firebase+push+notification+with+url&oq=open+a+link+by+clicking+the+firebase+push+notification&gs_l=psy-ab.1.1.0i71l8.0.0..78985...0.2..0.0.0.......0......gws-wiz.MIfANAAXxcg"));
+        startActivity(intent);*/
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
                 PendingIntent.FLAG_ONE_SHOT);
 

@@ -8,12 +8,12 @@
         android:id="@+id/nav_header_ImgVw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/icon_logo"
+        android:src="@mipmap/icon_idea"
         android:layout_centerHorizontal="true"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Admission Aid"
+        android:text="Admission Informer"
         android:layout_centerHorizontal="true"
         android:textSize="20dp"
         android:textColor="#000"

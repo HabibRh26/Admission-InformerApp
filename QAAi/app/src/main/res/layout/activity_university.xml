@@ -4,99 +4,166 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#66bb6a"
     android:orientation="vertical"
-    tools:context="com.example.habibcse25.qaai.UniversityActivity"
-    android:background="#66bb6a">
+    tools:context="com.example.habibcse25.qaai.UniversityActivity">
+
     <include
         android:id="@+id/univ_toolbar"
         layout="@layout/toolbar"></include>
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
-        <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
 
-        </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-        <ImageView
+                    <ImageView
+                        android:id="@+id/ImgVwPublic"
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/publicicon" />
 
-            android:id="@+id/ImgVwPrivate"
-            android:layout_width="150dp"
-            android:layout_height="120dp"
-            android:layout_marginLeft="240dp"
-            android:layout_marginTop="200dp"
-            android:src="@drawable/privateicon" />
+                    <Button
+                        android:id="@+id/btnPublic"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_btn_univ_admission"
+                        android:text="Public University" />
 
-        <Button
-            android:id="@+id/btnPrivate"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ImgVwPrivate"
-            android:layout_alignLeft="@+id/ImgVwPrivate"
-            android:layout_alignBottom="@+id/btnPublic"
-            android:background="@drawable/rounded_btn_univ_admission"
-            android:text="Private University" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="40dp">
+                    <ImageView
 
-        <ImageView
-            android:id="@+id/ImgVwPublic"
-            android:layout_width="150dp"
-            android:layout_height="120dp"
-            android:layout_alignBottom="@+id/ImgVwPrivate"
+                        android:id="@+id/ImgVwEngr"
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/engricon"
+                        />
 
-            android:layout_marginTop="200dp"
-            android:src="@drawable/publicicon"
-            android:text="Public University" />
+                    <Button
+                        android:id="@+id/btnEngr"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_btn_univ_admission"
+                        android:text="Engineering University" />
+                </LinearLayout>
+           </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="20dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/imgVwMedical"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_below="@+id/btnPrivate"
+                            android:layout_alignLeft="@+id/ImgVwPrivate"
+                            android:layout_marginLeft="2dp"
+                            android:src="@drawable/med" />
+                        <Button
+                            android:id="@+id/btnMedi"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_btn_univ_admission"
+                            android:text="Medical College" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="40dp">
 
-        <Button
-            android:id="@+id/btnPublic"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ImgVwPublic"
-            android:layout_alignLeft="@+id/ImgVwPublic"
-            android:background="@drawable/rounded_btn_univ_admission"
-            android:text="Public University" />
+                        <ImageView
+                            android:id="@+id/ImgVwPrivate"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/privateicon" />
 
-        <ImageView
+                        <Button
+                            android:id="@+id/btnPrivate"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_btn_univ_admission"
+                            android:text="Private University" />
+                    </LinearLayout>
 
-            android:id="@+id/ImgVwEngr"
-            android:layout_width="150dp"
-            android:layout_height="120dp"
-            android:layout_below="@+id/btnPrivate"
-            android:layout_alignLeft="@+id/ImgVwPublic"
-            android:layout_alignBottom="@+id/imgVwMedical"
-            android:src="@drawable/engricon" />
 
-        <Button
-            android:id="@+id/btnEngr"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ImgVwEngr"
-            android:layout_alignLeft="@+id/ImgVwEngr"
-            android:layout_marginLeft="0dp"
-            android:background="@drawable/rounded_btn_univ_admission"
-            android:text="Engineering University" />
 
-        <ImageView
-            android:id="@+id/imgVwMedical"
-            android:layout_width="150dp"
-            android:layout_height="120dp"
-            android:layout_below="@+id/btnPrivate"
-            android:layout_alignLeft="@+id/ImgVwPrivate"
-            android:layout_marginLeft="2dp"
-            android:src="@drawable/med" />
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnMedi"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imgVwMedical"
-            android:layout_alignLeft="@+id/ImgVwPrivate"
-            android:background="@drawable/rounded_btn_univ_admission"
-            android:text="Medical College" />
+                    <ImageView
+                        android:id="@+id/ImgVwSciTech"
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/sci_tech" />
 
+                    <Button
+                        android:id="@+id/btnSciTech"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_btn_univ_admission"
+                        android:text="science and techology" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="40dp">
+                    <ImageView
+
+                        android:id="@+id/ImgVwAgriculture"
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/agriculture"
+                        />
+
+                    <Button
+                        android:id="@+id/btnAgriculture"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_btn_univ_admission"
+                        android:text="Agricultural University" />
+                </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNav"
             android:layout_width="match_parent"
@@ -104,11 +171,11 @@
             android:layout_alignParentBottom="true"
             android:background="#388E3C"
             app:itemIconTint="@drawable/bottom_nav_color"
-            app:menu="@menu/bottom_navigation"
+            app:itemTextColor="@drawable/bottom_nav_color"
             app:labelVisibilityMode="labeled"
-            app:itemTextColor="@drawable/bottom_nav_color">
-
+            app:menu="@menu/bottom_navigation">
         </com.google.android.material.bottomnavigation.BottomNavigationView>
+
     </RelativeLayout>
 
 

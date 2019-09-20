@@ -43,7 +43,7 @@ public class DataSendActivity extends AppCompatActivity {
 
     public void saveNoticeFirebase(View view) {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference dbRef = database.getReference("Public_Notice");
+        DatabaseReference dbRef = database.getReference("Engineering_Notice");
         String Univ_ID = dbRef.push().child(NoticeUniName.getText().toString()).getKey();
 
         NoticeData_to_firebase noticedataToFirebase = new NoticeData_to_firebase(NoticeUniName.getText().toString(), NoticeDetails.getText().toString());
