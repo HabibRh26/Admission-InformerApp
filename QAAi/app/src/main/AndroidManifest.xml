@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.habibcse25.qaai">
+    package="com.informer.habibcse25.qaai">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -12,57 +12,57 @@
         android:roundIcon="@mipmap/icon_idea_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NavFeedbackActivity"></activity>
-        <activity android:name=".NavHelpActivity" />
-        <activity android:name=".AboutUsActivity" />
-        <activity android:name=".PublicDescActivity" />
-        <activity android:name=".NoticeActivity">
+        <activity android:name="com.informer.habibcse25.qaai.NavFeedbackActivity"></activity>
+        <activity android:name="com.informer.habibcse25.qaai.NavHelpActivity" />
+        <activity android:name="com.informer.habibcse25.qaai.AboutUsActivity" />
+        <activity android:name="com.informer.habibcse25.qaai.PublicDescActivity" />
+        <activity android:name="com.informer.habibcse25.qaai.NoticeActivity">
             <intent-filter>
                 <action android:name="NoticeActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name="com.informer.habibcse25.qaai.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UniversityActivity">
+        <activity android:name="com.informer.habibcse25.qaai.UniversityActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.informer.habibcse25.qaai.MainActivity" />
         </activity>
-        <activity android:name=".PublicActivity">
+        <activity android:name="com.informer.habibcse25.qaai.PublicActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".UniversityActivity" />
+                android:value="com.informer.habibcse25.qaai.UniversityActivity" />
         </activity>
-        <activity android:name=".EngrActivity">
+        <activity android:name="com.informer.habibcse25.qaai.EngrActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".UniversityActivity" />
+                android:value="com.informer.habibcse25.qaai.UniversityActivity" />
         </activity>
-        <activity android:name=".PrivateActivity">
+        <activity android:name="com.informer.habibcse25.qaai.PrivateActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".UniversityActivity" />
+                android:value="com.informer.habibcse25.qaai.UniversityActivity" />
         </activity>
-        <activity android:name=".EngrDescriptionActivity">
+        <activity android:name="com.informer.habibcse25.qaai.EngrDescriptionActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".EngrActivity" />
+                android:value="com.informer.habibcse25.qaai.EngrActivity" />
         </activity>
-        <activity android:name=".RegActivity" />
-        <activity android:name=".Admin_Activity" />
-        <activity android:name=".DataSendActivity" />
-        <activity android:name=".PrivateDescActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name="com.informer.habibcse25.qaai.RegActivity" />
+        <activity android:name="com.informer.habibcse25.qaai.Admin_Activity" />
+        <activity android:name="com.informer.habibcse25.qaai.DataSendActivity" />
+        <activity android:name="com.informer.habibcse25.qaai.PrivateDescActivity" />
+        <activity android:name="com.informer.habibcse25.qaai.MainActivity" />
 
         <service
-            android:name=".Model_clss.MyFirebaseMsgService"
+            android:name="com.informer.habibcse25.qaai.Model_clss.MyFirebaseMsgService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

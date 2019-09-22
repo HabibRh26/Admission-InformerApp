@@ -6,10 +6,6 @@
         android:title="Share App"
         android:icon="@drawable/ic_share_24dp"></item>
 
-   <item android:id="@+id/nav_admin"
-        android:title="Admin"
-        android:icon="@drawable/ic_admin_black_24dp"></item>
-
     <item android:id="@+id/nav_FeedBack"
         android:title="FeedBack"
         android:icon="@drawable/ic_contact_24dp"></item>
@@ -17,7 +13,7 @@
         android:title="Help"
         android:icon="@drawable/ic_help_24dp"></item>
     <item android:id="@+id/nav_aboutUs"
-        android:title="About Us"
+        android:title="About"
         android:icon="@drawable/ic_group_24dp"></item>
 
 </menu>

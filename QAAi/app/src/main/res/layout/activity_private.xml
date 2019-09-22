@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.habibcse25.qaai.PrivateActivity"
+    tools:context="com.informer.habibcse25.qaai.PrivateActivity"
     android:orientation="vertical">
     <include layout="@layout/toolbar"
         android:id="@+id/Private_univ_toolbar"></include>

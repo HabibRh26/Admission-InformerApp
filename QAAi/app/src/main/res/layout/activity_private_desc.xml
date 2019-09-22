@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.habibcse25.qaai.PrivateDescActivity">
+    tools:context="com.informer.habibcse25.qaai.PrivateDescActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
