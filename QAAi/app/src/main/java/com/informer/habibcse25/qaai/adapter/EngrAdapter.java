@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -49,7 +50,7 @@ public class EngrAdapter extends BaseAdapter {
         View custom_view = Inflater.inflate(R.layout.engr_univ_layout,null);
 
         ImageView imgEngrUniv= custom_view.findViewById(R.id.engr_uni_img);
-        TextView  txtEngrUniv = custom_view.findViewById(R.id.engr_uni_name);
+        TextView txtEngrUniv = custom_view.findViewById(R.id.engr_uni_name);
 
         imgEngrUniv.setImageResource(engrUnivClsArrayList.get(position).getImgid());
         txtEngrUniv.setText(engrUnivClsArrayList.get(position).getUni_name());

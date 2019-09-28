@@ -3,6 +3,8 @@ package com.informer.habibcse25.qaai;
 import android.content.Intent;
 
 import androidx.annotation.NonNull;
+
+import com.crashlytics.android.Crashlytics;
 import com.google.android.material.navigation.NavigationView;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -18,6 +20,8 @@ import android.widget.ImageView;
 
 import com.google.firebase.messaging.FirebaseMessaging;
 
+import io.fabric.sdk.android.Fabric;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,OnClickListener {
     Button btnVarsity, btnCollege, registerbtn, admin_section_btn;
     Intent intent1, intent2, intent3;
@@ -30,9 +34,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this,new Crashlytics());
         setContentView(R.layout.activity_main);
 
-        FirebaseMessaging.getInstance().subscribeToTopic("admissionNotice");
+
+        FirebaseMessaging.getInstance().subscribeToTopic("admissionNoti");
 
         btnVarsity = findViewById(R.id.btnVarsity);
     //    btnCollege = findViewById(R.id.btnCollege);
@@ -60,6 +66,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
     }
+
+
 /*    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -102,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_share_app:
                 Intent shareIntent = new Intent(Intent.ACTION_SEND);
                 shareIntent.setType("text/plain");
-                shareIntent.putExtra(Intent.EXTRA_TEXT,"www.shareintent.com");
+                shareIntent.putExtra(Intent.EXTRA_TEXT,"https://play.google.com/store/apps/details?id=com.informer.habibcse25.qaai");
                 startActivity(Intent.createChooser(shareIntent,"Share Using"));
                 break;
             case R.id.nav_aboutUs:
@@ -113,6 +121,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Intent intentFeedback = new Intent(this, NavFeedbackActivity.class);
                 startActivity(intentFeedback);
                 break;
+            /*case R.id.nav_admin:
+                Intent intentAdmin = new Intent(this, Admin_Activity.class);
+                startActivity(intentAdmin);
+                break;*/
             case R.id.nav_help:
                 Intent intentHelp = new Intent(this, NavHelpActivity.class);
                 startActivity(intentHelp);

@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.widget.ProgressBar;
 
 import com.github.ybq.android.spinkit.style.Wave;
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 
 public class SplashScreenActivity extends AppCompatActivity {
     ProgressBar progressBar;
@@ -13,6 +15,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_splash_screen);
         progressBar = findViewById(R.id.spin_kit);
         Wave wave = new Wave();

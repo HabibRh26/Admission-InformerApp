@@ -19,13 +19,19 @@ import androidx.fragment.app.Fragment;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.informer.habibcse25.qaai.Model_clss.EngrUnivCls;
+import com.informer.habibcse25.qaai.adapter.EngrAdapter;
 
-public class UniversityActivity extends AppCompatActivity implements View.OnClickListener{
+import java.util.ArrayList;
+
+public class UniversityActivity extends AppCompatActivity implements View.OnClickListener {
     Dialog connection_error_Dialog;
     ImageView imgVwConnectionDialog_error,imgVwConnectionDialog_close,ImgVwPublic,ImgVwPrivate,ImgVwEngr,ImgVwMed,ImgVwSciTech,ImgVwAgriculture;
     TextView txtvw_net_connection_Title;
@@ -33,11 +39,13 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
     Intent intentPublic,intentPrivate,intentEngr,intentMedical;
     Toolbar toolbarUniv;
 
+    ArrayList<EngrUnivCls> engr_univ_list ;
+    Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_university);
-
         btnPublic = findViewById(R.id.btnPublic);
         ImgVwPublic = findViewById(R.id.ImgVwPublic);
         btnEngr = findViewById(R.id.btnEngr);
@@ -50,9 +58,6 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
         ImgVwSciTech = findViewById(R.id.ImgVwSciTech);
         btnAgri = findViewById(R.id.btnAgriculture);
         ImgVwAgriculture = findViewById(R.id.ImgVwAgriculture);
-
-        BottomNavigationView bottomNavView = findViewById(R.id.bottomNav);
-        bottomNavView.setOnNavigationItemSelectedListener(navItemListener);
 
         btnPublic.setOnClickListener(this);
         btnEngr.setOnClickListener(this);
@@ -68,44 +73,15 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
         ImgVwAgriculture.setOnClickListener(this);
 
 
+        BottomNavigationView bottomNavView = findViewById(R.id.bottomNav);
+        bottomNavView.setOnNavigationItemSelectedListener(navItemListener);
+
+
         toolbarUniv = findViewById(R.id.univ_toolbar);
         setSupportActionBar(toolbarUniv);
         getSupportActionBar().setTitle("University Categories");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-
-    private  BottomNavigationView.OnNavigationItemSelectedListener navItemListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-            Fragment selectedFragment = null;
-            switch(menuItem.getItemId()){
-
-                case R.id.bottomNavHome:
-                    Intent intentHome = new Intent(UniversityActivity.this,MainActivity.class);
-                    startActivity(intentHome);
-                    break;
-
-                case R.id.bottomNavNotice:
-                    Intent intentNotice = new Intent(Intent.ACTION_VIEW,Uri.parse("https://drive.google.com/drive/folders/1tX7jgstWDoj9p7h5mAHIaKBwNklUbO10"));
-                    startActivity(intentNotice);
-                    break;
-                case R.id.bottomNavEligibility:
-                    Intent intentEligibility = new Intent(Intent.ACTION_VIEW,Uri.parse("https://drive.google.com/drive/folders/1Fqlf4IpJVph84ocA7rc2sSqQxWM4zNtV?usp=sharing"));
-                    startActivity(intentEligibility);
-                    break;
-                case R.id.bottomNavApply:
-                    Intent intentApply = new Intent(Intent.ACTION_VIEW,Uri.parse("https://drive.google.com/drive/folders/1PB5SIjRhXNhfDa7EMZluL3dSKw9_dQ8N"));
-                    startActivity(intentApply);
-                    break;
-                case R.id.bottomNavCircular:
-                    Intent intentCircular = new Intent(Intent.ACTION_VIEW,Uri.parse("https://drive.google.com/drive/folders/15ZKE0XgrK7WD7cuWhaVmHzUaesE__7a-"));
-                    startActivity(intentCircular);
-                    break;
-            }
-
-            return true;
-        }
-    };
 
     @Override
     public void onClick(View view) {
@@ -126,7 +102,7 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
         else if(view.getId() == R.id.imgVwMedical){
             if (check_Internet_Connection()) {
 
-                 intentMedical = new Intent(Intent.ACTION_VIEW, Uri.parse("https://drive.google.com/drive/folders/12kG0MFukZyZJH0OmCPk5_kch100fEfO1"));
+                intentMedical = new Intent(Intent.ACTION_VIEW, Uri.parse("https://drive.google.com/drive/folders/12kG0MFukZyZJH0OmCPk5_kch100fEfO1"));
                 startActivity(intentMedical);
 
             }
@@ -140,7 +116,7 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
         else if(view.getId()==R.id.ImgVwSciTech){
             if (check_Internet_Connection()) {
 
-               Intent intentSciTech = new Intent(Intent.ACTION_VIEW,Uri.parse("https://drive.google.com/drive/folders/1s6M8Qsd6C-rFD6iAWkC7kKvyg4KoAZZ_"));
+                Intent intentSciTech = new Intent(Intent.ACTION_VIEW,Uri.parse("https://drive.google.com/drive/folders/1s6M8Qsd6C-rFD6iAWkC7kKvyg4KoAZZ_"));
                 startActivity(intentSciTech);
 
             }
@@ -203,7 +179,7 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
             }
 
         }
-       else if(view.getId()==R.id.btnVarsity){
+        else if(view.getId()==R.id.btnVarsity){
             if (check_Internet_Connection()) {
 
                 intentPublic = new Intent(this,PublicActivity.class);
@@ -231,7 +207,7 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
             }
 
         }
-       else if(view.getId()==R.id.btnPrivate){
+        else if(view.getId()==R.id.btnPrivate){
             if (check_Internet_Connection()) {
 
                 intentPrivate = new Intent(this,PrivateActivity.class);
@@ -282,6 +258,42 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
 
     }
 
+    private  BottomNavigationView.OnNavigationItemSelectedListener navItemListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+            Fragment selectedFragment = null;
+            switch(menuItem.getItemId()){
+
+                case R.id.bottomNavHome:
+                    Intent intentHome = new Intent(UniversityActivity.this,MainActivity.class);
+                    startActivity(intentHome);
+                    break;
+
+                case R.id.bottomNavNotice:
+                    Intent intentNotice = new Intent(Intent.ACTION_VIEW,Uri.parse("https://drive.google.com/drive/folders/1tX7jgstWDoj9p7h5mAHIaKBwNklUbO10"));
+                    startActivity(intentNotice);
+                    break;
+                case R.id.bottomNavEligibility:
+                    Intent intentEligibility = new Intent(Intent.ACTION_VIEW,Uri.parse("https://drive.google.com/drive/folders/1Fqlf4IpJVph84ocA7rc2sSqQxWM4zNtV?usp=sharing"));
+                    startActivity(intentEligibility);
+                    break;
+                case R.id.bottomNavApply:
+                    Intent intentApply = new Intent(Intent.ACTION_VIEW,Uri.parse("https://drive.google.com/drive/folders/1PB5SIjRhXNhfDa7EMZluL3dSKw9_dQ8N"));
+                    startActivity(intentApply);
+                    break;
+                case R.id.bottomNavCircular:
+                    Intent intentCircular = new Intent(Intent.ACTION_VIEW,Uri.parse("https://drive.google.com/drive/folders/15ZKE0XgrK7WD7cuWhaVmHzUaesE__7a-"));
+                    startActivity(intentCircular);
+                    break;
+            }
+
+            return true;
+        }
+    };
+
+
+
+
     private void showDialog() {
         connection_error_Dialog = new Dialog(this);
         connection_error_Dialog.setContentView(R.layout.net_connection_dialog);
@@ -322,4 +334,6 @@ public class UniversityActivity extends AppCompatActivity implements View.OnClic
         }
         return connected;
     }
+
+
 }

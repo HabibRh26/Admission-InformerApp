@@ -4,20 +4,20 @@ public class NoticeData_to_firebase {
     public NoticeData_to_firebase() {
     }
 
-    private String univ_Name;
+    private String uni_Name;
     private String univ_Notice;
 
-    public NoticeData_to_firebase(String univ_Name, String univ_Notice) {
-        this.univ_Name = univ_Name;
+    public NoticeData_to_firebase(String uni_Name, String univ_Notice) {
+        this.uni_Name = uni_Name;
         this.univ_Notice = univ_Notice;
     }
 
-    public String getUniv_Name() {
-        return univ_Name;
+    public String getUni_Name() {
+        return uni_Name;
     }
 
-    public void setUniv_Name(String univ_Name) {
-        this.univ_Name = univ_Name;
+    public void setUniv_Name(String uniName) {
+        this.uni_Name = uniName;
     }
 
     public String getUniv_Notice() {

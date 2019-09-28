@@ -43,7 +43,7 @@
             android:textStyle="bold"
             android:layout_marginLeft="5dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:text="admissionaid20@gmail.com"/>
+            android:text="admissionInform19@gmail.com"/>
     </RelativeLayout>
 
 

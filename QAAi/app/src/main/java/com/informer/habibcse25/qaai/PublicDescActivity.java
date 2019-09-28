@@ -184,7 +184,7 @@ public class PublicDescActivity extends AppCompatActivity {
 
         }
         else if(index ==8){
-            dbRef.child("Begum Rokeya Uni").addListenerForSingleValueEvent(new ValueEventListener() {
+            dbRef.child("Berobi").addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     DataToFirebase univ_Name = dataSnapshot.getValue(DataToFirebase.class);

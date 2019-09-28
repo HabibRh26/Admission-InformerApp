@@ -11,6 +11,7 @@ import android.os.Build;
 import androidx.core.app.NotificationCompat;
 import android.util.Log;
 
+import com.informer.habibcse25.qaai.ResultActivity;
 import com.informer.habibcse25.qaai.MainActivity;
 import com.informer.habibcse25.qaai.NoticeActivity;
 import com.informer.habibcse25.qaai.R;
@@ -58,13 +59,13 @@ public class MyFirebaseMsgService extends FirebaseMessagingService {
 
         if(click_action.equals("NoticeActivity")){
             intent = new Intent(this, NoticeActivity.class);
-          //  intent.putExtra("univName",title);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         }
-        else if(click_action.equals("MAINACTIVITY")){
-            intent = new Intent(this, MainActivity.class);
+        else if(click_action.equals("ResultActivity")){
+            intent = new Intent(this, ResultActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         }
+
         else{
 
             intent = new Intent(this, MainActivity.class);
@@ -72,7 +73,7 @@ public class MyFirebaseMsgService extends FirebaseMessagingService {
         }
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             NotificationChannel channel =
-                    new NotificationChannel("myNotifications","ownNotifications", NotificationManager.IMPORTANCE_DEFAULT);
+                    new NotificationChannel("myLoNotifications","ownLoNotifications", NotificationManager.IMPORTANCE_DEFAULT);
             NotificationManager manager = getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel);
         }
@@ -84,7 +85,7 @@ public class MyFirebaseMsgService extends FirebaseMessagingService {
                 PendingIntent.FLAG_ONE_SHOT);
 
         Uri defaultSoundUri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this,"myNotifications")
+        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this,"myLoNotifications")
                 .setSmallIcon(R.drawable.ic_icon)
                 .setContentTitle(title)
                 .setContentText(messageBody)
