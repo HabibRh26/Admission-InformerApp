@@ -5,10 +5,10 @@ QAAi(Quick Access Admission Informer) App or **Admission Informer** App in short
 https://play.google.com/store/apps/details?id=com.informer.habibcse25.qaai&fbclid=IwAR0Yz9AUQ9XzpVRiHUbiLyyY9loLsIJsWJEPRwHJQ40AC4z60aURH_nLS04
 
 ## Technical Info:
-**Type :** Native Android Application
+**Type :** Native Android Application </br>
 **IDE :** Android Studio </br>
-**Database :** Firebase
-**Compatibility :** Android
+**Database :** Firebase </br>
+**Compatibility :** Android </br>
 
 ## Features:
 
