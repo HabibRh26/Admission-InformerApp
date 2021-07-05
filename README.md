@@ -12,8 +12,11 @@ https://play.google.com/store/apps/details?id=com.informer.habibcse25.qaai&fbcli
 
 ## Features:
 
-| Interface 1 |  Interface 2 |  Interface 3 |  Interface 4 |
+| Splash Screen |  Home |  Navigation Drawer |  Dashboard |
 | --------------- | --------------- | --------------- | --------------- |
-| ![img1](images/img1.png) | ![img2](images/img2.png) | ![img3](images/img3.png) | ![img4](images/img4.png) |
-| Interface 5 |  Interface 6 |  Interface 7 |  Interface 8 |
-| ![img5](images/img5.png)| ![img6](images/img6.png) | ![img7](images/img7.png) | ![img8](images/img8.png) |
+| ![splash](images/splash.gif) | ![img2](images/img2.png) | ![img3](images/img3.png) | ![img4](images/img4.png) |
+| Interface   |  Firebase Data Fetch |  Interface  |  Firebase Data Fetch             |
+| ![img5](images/img5.png)| ![du](images/du.gif) | ![img6](images/img6.png) | ![firebase](images/firebase.gif)| 
+
+
+
